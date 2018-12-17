@@ -30,6 +30,6 @@ if __name__ == '__main__':
                                        my_loc[0],
                                        my_loc[1])
 
-    meteor_data.sort(key=get_dist)
+    meteor_data.sort(key=lambda x : x.get('distance',math.inf))
 
     print(meteor_data[0:10])
